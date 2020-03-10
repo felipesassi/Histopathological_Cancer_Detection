@@ -1,0 +1,17 @@
+{
+    "train_parameters":
+    {
+        "learning_rate": 0.001,
+        "weight_decay": 2.5e-4,
+        "epochs": 100,
+        "batch_size": 128
+    },
+    "network_parameters": 
+    {
+        "linear_1": 1024,
+        "linear_2": 512,
+        "linear_3": 1,
+        "dropout_1": 0.5,
+        "dropout_2": 0.25
+    }
+}
