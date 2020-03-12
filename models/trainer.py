@@ -2,7 +2,7 @@ import torch
 from utils.utils import show_training_progress
 
 class Trainer():
-    def __init__(self, model, optimizer, loss, metric, train_data, validation_data, epochs, device, lr_scheduler=None):
+    def __init__(self, model, optimizer=None, loss=None, metric=None, train_data=None, validation_data=None, epochs=None, device=None, lr_scheduler=None):
         self.model = model
         self.optimizer = optimizer 
         self.loss = loss
