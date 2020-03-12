@@ -46,10 +46,10 @@ class Trainer():
             print("")
 
         def save(self, train_mode=False):
-            pass
+            torch.save(self.model.state_dict(), "model.pth")
 
         def load(self, train_mode=False):
-            pass
+            self.model.load_state_dict(torch.load("model.pth"))
 
 if __name__ == "__main__":
     pass
