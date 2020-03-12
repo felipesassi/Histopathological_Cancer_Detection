@@ -1,8 +1,4 @@
 import numpy as np
-import json
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
 from models.model import TL_ResNet50
 from utils.utils import get_device, read_parameters, separate_train_val
 from models.trainer import Trainer
