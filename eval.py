@@ -1,7 +1,7 @@
 import numpy as np
 from models.model import TL_ResNet50
 from utils.utils import get_device, read_parameters, separate_train_val
-from models.trainer import Trainer
+from models.controller import Controller
 from PIL import Image
 
 def load_image(image_name, transformer=None):
@@ -21,6 +21,6 @@ if __name__ == "__main__":
     configs = read_parameters()
     device = get_device
     ResNet50 = TL_ResNet50(configs["network_parameters"], pretrained = True).to(device)
-    Train = Trainer(ResNet50)
-    Train.load()
+    Control = Controller(ResNet50)
+    Control.load()
     ResNet50.eval()

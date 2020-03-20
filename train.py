@@ -7,7 +7,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from models.model import TL_ResNet50
 from datasets.datasets import generate_train_validation_dataloader
-from models.trainer import Trainer
+from models.controller import Controller
 from utils.utils import get_device, read_parameters, separate_train_val
 from metrics.metrics import Accuracy_Metric
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
                         lr = configs["train_parameters"]["learning_rate"],
                         weight_decay = configs["train_parameters"]["weight_decay"])
     Metrics = Accuracy_Metric()
-    Train = Trainer(model = ResNet50,
+    Control = Controller(model = ResNet50,
                 optimizer = Optimizer,
                 loss = Loss,
                 metric = Metrics,
@@ -35,4 +35,4 @@ if __name__ == "__main__":
                 epochs = configs["train_parameters"]["epochs"],
                 device = device,
                 lr_scheduler = None)
-    Train.train()
+    Control.train()

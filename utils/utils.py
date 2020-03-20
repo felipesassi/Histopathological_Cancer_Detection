@@ -29,7 +29,7 @@ def separate_train_val(data):
   n = data.shape[0]
   n1 = int(0.75*n)
   n2 = n - n1
-  return df[:n1].reset_index(drop = True), df[n1:].reset_index(drop = True)
+  return data[:n1].reset_index(drop = True), data[n1:].reset_index(drop = True)
 
 def show_training_progress(metric, index, batch_size, train):
     if train == False:
