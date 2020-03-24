@@ -10,7 +10,7 @@ A ideia básica desse projeto é realizar a classificação de células em duas 
 
 ## Conjuntos de dados
 
-![image]("images/example.png")
+![image](images/example.png)
 
 
 ### Conjunto de dados de treino
