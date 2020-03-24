@@ -10,6 +10,8 @@ A ideia básica desse projeto é realizar a classificação de células em duas 
 
 ## Conjuntos de dados
 
+![image]: https://github.com/felipesassi/Histopathological_Cancer_Detection/blob/master/images/example.png "image"
+
 
 ### Conjunto de dados de treino
 
