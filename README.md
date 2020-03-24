@@ -1,6 +1,6 @@
 # Histopathological Cancer Detection
 
-Aqui está minha solução para a competição histopatological cancer detection, hospedada na plataforma [Kaggle](https://www.kaggle.com/c/histopathologic-cancer-detection).
+Aqui está minha solução para a competição **[histopathological cancer detection]**(https://www.kaggle.com/c/histopathologic-cancer-detection).
 
 ## O problema proposto
 
@@ -10,8 +10,9 @@ A ideia básica desse projeto é realizar a classificação de células em duas 
 
 ## Conjuntos de dados
 
-![image](images/example.png)
+As imagens que compõe o conjunto de dados são como a imagem abaixo.
 
+![image](images/example.png)
 
 ### Conjunto de dados de treino
 
@@ -33,7 +34,7 @@ Todo o projeto foi desenvolvido por meio da plataforma Google Colab, a qual disp
 
 Diversos modelos de redes neurais convolucioonais foram testados afim de se maximizar o desempenho obtido na classificação. O modelo escolhido consiste um um rede ResNet50 com a inserção de três camadas completamente conectadas para a classificação. Além disso, os pesos da parte convolucional são inicializados com os pesos utilizados na competição ImageNet.
 
-Para incrementar o conjunto de dados algumas técnicas de *data agumentation* foram utilizadas (os nomes correspondem as funções da biblioteca *albumentations*):
+Para melhorar o desempenho do modelo algumas técnicas de *data agumentation* foram utilizadas (os nomes correspondem as funções da biblioteca *albumentations*):
 
 - RGBShift();
 - Blur();
