@@ -1,6 +1,6 @@
 # Histopathological Cancer Detection
 
-Aqui está minha solução para a competição **[histopathological cancer detection]**(https://www.kaggle.com/c/histopathologic-cancer-detection).
+Aqui está minha solução para a competição **[histopathological cancer detection](https://www.kaggle.com/c/histopathologic-cancer-detection)**.
 
 ## O problema proposto
 
@@ -43,19 +43,32 @@ Para melhorar o desempenho do modelo algumas técnicas de *data agumentation* fo
 - RandomContrast();
 - VerticalFlip();
 - HorizontalFlip();
+- Normalize();
 - CoarseDropout().
+
+Quatro experimentos foram realizados:
+
+- Experimento 1: sem *data augmentation*;
+- Experimento 2: com *data augmentation* (RandomGamma(), RandomBrightness(), RandomContrast());
+- Experimento 3: com *data augmentation* (VerticalFlip(), HorizontalFlip());
+- Experimento 4: com todas as técnicas de *data augmenation* mencionadas.
+
+Em todos os experimentos as imagens de entrada foram normalizadas.
+
+A função custo utilizada é BCEWithLogitsLoss() a qual incorpora uma camada sigmóide e a função custo BCELoss().	
 
 ### ResNet50 modificada
 
-Aqui vai o modelo modificado
-
 ## Resultados
 
-O modelo conseguiu os seguintes resultados:
+O modelo conseguiu os seguintes resultados em cada um dos experimentos:
 
-- AUC treino: 96%;
-- AUC validação: 98%;
-- AUC teste: 95%.
+| Experiment | Train | Validation | Test |
+|------------|-------|------------|------|
+| 1          | 0.98  | 0.98       | 0.95 |
+| 2          | 0.98  | 0.99       | 0.95 |
+| 3          | 0.98  | 0.98       | 0.94 |
+| 4          | 0.96  | 0.98       | 0.94 |
 
 ###
 
