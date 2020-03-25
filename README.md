@@ -59,6 +59,10 @@ A função custo utilizada é BCEWithLogitsLoss() a qual incorpora uma camada si
 
 ### ResNet50 modificada
 
+A arquitetura ResNet50 utilizada nesse projeto foi a seguinte:
+
+![image](images/model.png)
+
 ## Resultados
 
 O modelo conseguiu os seguintes resultados em cada um dos experimentos:
@@ -90,7 +94,6 @@ Após clonar o repositório é necessária realizar o donwload do conjunto de da
 ### Treinamento do modelo
 
 Para treinar o modelo é necessário rodar o aquivo *train.py* atráves do seguinte comando:
-
 
 ```
 python3 train.py
